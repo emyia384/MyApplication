@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WaveChart">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="0dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/Temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="二氧化碳浓度采集显示"
+            android:drawableTop="@color/design_default_color_secondary"
+            android:textColor="#222222"
+            android:textSize="30dp">
+
+        </TextView>
+    </LinearLayout>
+
+    <!--带水波纹的圆-->
+    <com.example.myapplication.util.WaveProgress
+        android:id="@+id/wave_progress_bar"
+        android:layout_width="330dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center_horizontal"
+        app:darkWaveAnimTime="1000"
+        app:darkWaveColor="@android:color/holo_blue_light"
+        app:lightWaveAnimTime="2000"
+        app:lightWaveColor="@android:color/holo_blue_dark"
+        app:lightWaveDirect="R2L"
+        app:lockWave="false"
+        app:valueSize="@dimen/text_size_35"
+        app:waveHeight="30dp"
+        app:value="0"
+        app:maxValue="100"
+        app:waveNum="1" />
+
+
+    <Button
+        android:id="@+id/demo_return"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回"/>
+</LinearLayout>
